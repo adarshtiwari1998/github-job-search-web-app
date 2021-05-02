@@ -1,8 +1,10 @@
-<!-- github job search web app  -->
+<!-- github job search web app -->
 
 # React 
 # React Dom
 # Axios
 # React Markdown
 # React Script
-# Github Job search API
+# Github Job search 
+
+

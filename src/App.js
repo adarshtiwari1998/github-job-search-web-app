@@ -14,6 +14,8 @@ function App() {
       position: "fixed",
       left: "0",
       right: "0",
+      marginTop:"100px",
+      zIndex:"9999",
       bottom: "0",
       width: "100%",
       backgroundColor: "white",
@@ -44,6 +46,9 @@ return (
         return <Job key={job.id} job={job} />
       })}
       <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />
+      <div style={{marginTop: "100px"}}>
+      </div>
+
       <div style={footer}>
         <p>Develop and design by Adarsh Tripathi<span role="img" aria-label=""> 👇</span></p>
         <p>My Github Profile link <span role="img" aria-label=""> 👉</span>

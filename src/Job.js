@@ -10,7 +10,7 @@ export default function Job({ job }) {
 }
 const avatarImage = {
   boxShadow: "0 .125rem .25rem  #9E9E9E",
-  borderRadius:"20px"
+  borderRadius:"10px"
 };
 
   return (
@@ -25,8 +25,12 @@ const avatarImage = {
               {new Date(job.created_at).toLocaleDateString()}
             </Card.Subtitle>
             <Badge variant="secondary" className="mr-2">{job.type}</Badge>
-            <Badge variant="secondary">{job.location}</Badge>
+            <Badge variant="secondary" className="mr-2">{job.location}</Badge>
             <div style={{ wordBreak: 'break-all' }}>
+              <h5 className="mt-2">Website</h5><ReactMarkdown source={job.company_url} />
+            </div>
+            <div style={{ wordBreak: 'break-all' }}>
+            <h5>Apply Here</h5>
               <ReactMarkdown source={job.how_to_apply} />
             </div>
           </div>
@@ -43,6 +47,13 @@ const avatarImage = {
         <Collapse in={open}>
           <div className="mt-4">
             <ReactMarkdown source={job.description} />
+            <div style={{ wordBreak: 'break-all' }}>
+              <h5 className="mt-2">Website</h5><ReactMarkdown source={job.company_url} />
+            </div>
+            <div style={{ wordBreak: 'break-all' }}>
+            <h5>Apply Here</h5>
+              <ReactMarkdown source={job.how_to_apply} />
+            </div>
           </div>
         </Collapse>
       </Card.Body>
