@@ -23,7 +23,7 @@ Live Url: 👉 https://git-job-search.web.app
 
 "####  My website url #####"
 
-👉 http://marketitup.in/
+👉 https://marketitup.in/
 
 --------------------------******--------------------------------
 
