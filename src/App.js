@@ -5,24 +5,28 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Job from './Job'
 import JobsPagination from './JobsPagination';
 import SearchForm from './SearchForm';
+import "./App.css";
 
 function App() {
   const [params, setParams] = useState({})
   const [page, setPage] = useState(1)
   const { jobs, loading, error, hasNextPage } = useFetchJobs(params, page)
-    const footer= {
+    const footer = {
       position: "fixed",
       left: "0",
       right: "0",
-      marginTop:"100px",
       zIndex:"9999",
-      bottom: "0",
+      padding: "1.25rem",
+      lineHeight:"1.2",
+      bottom: "-18px",
       width: "100%",
       backgroundColor:"#23049d",
       color:"white",
       fontWeight: "bold",
       textAlign: "center",
   };
+
+
  function handleParamChange(e) {
     const param = e.target.name
     const value = e.target.value
@@ -34,8 +38,7 @@ function App() {
 
 return (                                                                                                                                                                                       
     <Container className="my-4 ">
-
-      <h1 className="mb-4 text-white "><span role="img" aria-label="">🤙</span>GitHub Jobs Search Made Easy with job search web app<span role="img" aria-label="">🤙</span></h1>
+      <h1 className="mb-4 text-white homefirstheading"><span role="img" aria-label="">🤙</span>GitHub Jobs Search Made  Easy with Git job search web apps<span role="img" aria-label="">🤙</span></h1>
       <SearchForm params={params} onParamChange={handleParamChange} />
       <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />
       {loading && <Spinner className="mb-3 mt-2" id="spinner " animation="grow" style={{color:"white"}} role="status">
@@ -46,13 +49,15 @@ return (
         return <Job key={job.id} job={job} />
       })}
       <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />
-      <div style={{marginTop: "100px"}}>
+      <div style={{marginTop: "120px"}}>
       </div>
 
       <div style={footer}>
-        <p>Develop and design by Adarsh Tripathi<span role="img" aria-label=""> 👇</span></p>
-        <p>My Github Profile link <span role="img" aria-label=""> 👉</span>
+        <p><span role="img" aria-label="">👉</span> Develop and design by Adarsh Tripathi</p>
+        <p>My Github Profile link <span role="img" aria-label="">👇</span>
          <a target="blank"href="https://github.com/adarshtiwari1998">https://github.com/adarshtiwari1998</a> </p>
+         <p>Check out My Website <span role="img" aria-label="">👇</span>
+         <a target="blank"href="https://marketitup.in">https://marketitup.in</a> </p>
         </div>
     </Container>
   )

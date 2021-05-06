@@ -12,7 +12,7 @@ export default function Job({ job }) {
 }
 const avatarImage = {
   boxShadow: "0 .125rem .25rem  #9E9E9E",
-  borderRadius:"10px"
+  borderRadius:"10px",
 };
 
 
@@ -31,14 +31,14 @@ const avatarImage = {
             <Badge variant="secondary" className="mr-2">{job.location}</Badge>
             <Badge variant="secondary" className="mr-2">{job.company}</Badge>
             <div style={{ wordBreak: 'break-all' }}>
-              <h5 className="mt-2">Website</h5><ReactMarkdown source={job.company_url} />
+              <h5 className="mt-2 urlclass">Website</h5><ReactMarkdown source={job.company_url} />
             </div>
             <div style={{ wordBreak: 'break-all' }}>
-            <h5>Apply Here</h5>
+            <h5 className="applyclass">Apply Here</h5>
               <ReactMarkdown source={job.how_to_apply} />
             </div>
             <div style={{ wordBreak: 'break-all' }}>
-            <h5>Github Job link</h5>
+            <h5 className="gitjobclass">Github Job link</h5>
               <ReactMarkdown source={job.url} />
             </div>
           </div>
@@ -56,10 +56,10 @@ const avatarImage = {
           <div className="mt-4">
             <ReactMarkdown source={job.description} />
             <div style={{ wordBreak: 'break-all' }}>
-              <h5 className="mt-2">Website</h5><ReactMarkdown source={job.company_url} />
+              <h5 className="mt-2 urlclass">Website</h5><ReactMarkdown source={job.company_url} />
             </div>
             <div style={{ wordBreak: 'break-all' }}>
-            <h5>Apply Here</h5>
+            <h5 className="applyclass">Apply Here</h5>
               <ReactMarkdown source={job.how_to_apply} />
             </div>
           </div>
