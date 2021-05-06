@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Card, Badge, Button, Collapse } from 'react-bootstrap'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown';
+
+
 
 export default function Job({ job }) {
   const [open, setOpen] = useState(false)
@@ -12,6 +14,7 @@ const avatarImage = {
   boxShadow: "0 .125rem .25rem  #9E9E9E",
   borderRadius:"10px"
 };
+
 
   return (
     <Card className="mb-3">
@@ -26,12 +29,17 @@ const avatarImage = {
             </Card.Subtitle>
             <Badge variant="secondary" className="mr-2">{job.type}</Badge>
             <Badge variant="secondary" className="mr-2">{job.location}</Badge>
+            <Badge variant="secondary" className="mr-2">{job.company}</Badge>
             <div style={{ wordBreak: 'break-all' }}>
               <h5 className="mt-2">Website</h5><ReactMarkdown source={job.company_url} />
             </div>
             <div style={{ wordBreak: 'break-all' }}>
             <h5>Apply Here</h5>
               <ReactMarkdown source={job.how_to_apply} />
+            </div>
+            <div style={{ wordBreak: 'break-all' }}>
+            <h5>Github Job link</h5>
+              <ReactMarkdown source={job.url} />
             </div>
           </div>
           <img className="d-none d-md-block "border="primary" style={avatarImage} height="50" alt={job.company} src={job.company_logo} />

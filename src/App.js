@@ -18,8 +18,8 @@ function App() {
       zIndex:"9999",
       bottom: "0",
       width: "100%",
-      backgroundColor: "white",
-      color:"black",
+      backgroundColor:"#23049d",
+      color:"white",
       fontWeight: "bold",
       textAlign: "center",
   };
