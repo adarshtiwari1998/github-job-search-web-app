@@ -17,6 +17,7 @@ function App() {
       right: "0",
       zIndex:"9999",
       padding: "1.25rem",
+      overFlow: "hidden",
       lineHeight:"1.2",
       bottom: "-18px",
       width: "100%",
